@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Infos échéance -->
+    <TextView android:id="@+id/tvInfoEcheance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="13sp"
+        android:textColor="#333333"
+        android:background="#F5F5F5"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Champ montant -->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Montant du paiement (Ar)"
+        android:textStyle="bold" android:textColor="#333333"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText android:id="@+id/etMontantPaiement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Ex : 87000"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:elevation="1dp"/>
+
+</LinearLayout>

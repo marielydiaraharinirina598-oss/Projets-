@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#F5F5F5"
+    android:padding="32dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="👤" android:textSize="48sp" android:layout_marginBottom="12dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Connexion Agent" android:textSize="24sp"
+        android:textStyle="bold" android:textColor="#1565C0"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Identifiez-vous pour continuer"
+        android:textSize="14sp" android:textColor="#757575"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Username -->
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Identifiant" android:textStyle="bold"
+        android:textColor="#333333" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/etUsername"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Votre identifiant" android:background="#FFFFFF"
+        android:padding="14dp" android:textSize="15sp"
+        android:elevation="1dp" android:layout_marginBottom="16dp"/>
+
+    <!-- PIN -->
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Code PIN (4 chiffres)" android:textStyle="bold"
+        android:textColor="#333333" android:layout_marginBottom="6dp"/>
+    <EditText android:id="@+id/etPinAgent"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="••••" android:background="#FFFFFF"
+        android:padding="14dp" android:textSize="20sp"
+        android:inputType="numberPassword" android:maxLength="4"
+        android:elevation="1dp" android:layout_marginBottom="8dp"/>
+
+    <!-- Erreur -->
+    <TextView android:id="@+id/tvErrorAgent"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="" android:textColor="#C62828"
+        android:textSize="13sp" android:layout_marginBottom="20dp"/>
+
+    <!-- Progress -->
+    <ProgressBar android:id="@+id/progressBar"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:visibility="gone" android:layout_marginBottom="12dp"/>
+
+    <!-- Bouton connexion -->
+    <Button android:id="@+id/btnConnecter"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:text="Se connecter" android:backgroundTint="#1565C0"
+        android:textSize="16sp" android:textStyle="bold"/>
+
+</LinearLayout>

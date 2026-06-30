@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F5F5">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#1565C0" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/tvTitreAgent" android:text="Nouvel Agent"
+            android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Nom *" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etNomAgent" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Prénom *" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etPrenomAgent" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Identifiant (username) *" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etUsernameAgent" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:hint="Ex : ragent01" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="PIN (4 chiffres) *" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etPinAgent" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:inputType="numberPassword" android:maxLength="4"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Rôle *" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <Spinner android:id="@+id/spRoleAgent" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Téléphone" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etTelAgent" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:inputType="phone" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Email" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etEmailAgent" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:inputType="textEmailAddress" android:padding="12dp" android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="16dp">
+        <Button android:id="@+id/btnAnnulerAgent" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Annuler" android:backgroundTint="#FFFFFF"
+            android:textColor="#1565C0" android:layout_marginEnd="8dp"/>
+        <Button android:id="@+id/btnSaveAgent" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Enregistrer" android:backgroundTint="#1565C0"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F5F5">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#2E7D32" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Nouveau Crédit" android:textColor="#FFFFFF"
+            android:textSize="18sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Client *" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <Spinner android:id="@+id/spClient" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Montant principal (Ar) *" android:textStyle="bold"
+                android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etMontant" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Ex : 500000"
+                android:inputType="numberDecimal" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Taux d'intérêt mensuel (%) *" android:textStyle="bold"
+                android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etTaux" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Ex : 2.5"
+                android:inputType="numberDecimal" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Durée (mois) *" android:textStyle="bold"
+                android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etDuree" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Ex : 6"
+                android:inputType="number" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <!-- Mensualité calculée automatiquement -->
+            <TextView android:id="@+id/tvMensualite"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Mensualité estimée : -"
+                android:background="#E8F5E9" android:padding="12dp"
+                android:textColor="#2E7D32" android:textStyle="bold"
+                android:textSize="15sp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Date de début *" android:textStyle="bold"
+                android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etDateDebut" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="AAAA-MM-JJ"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Fréquence de paiement" android:textStyle="bold"
+                android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <Spinner android:id="@+id/spFrequence" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Type de crédit" android:textStyle="bold"
+                android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <Spinner android:id="@+id/spType" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Objet du crédit" android:textStyle="bold"
+                android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etObjet" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Ex : Achat matériel"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="16dp">
+        <Button android:id="@+id/btnAnnuler" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Annuler" android:backgroundTint="#FFFFFF"
+            android:textColor="#2E7D32" android:layout_marginEnd="8dp"/>
+        <Button android:id="@+id/btnSave" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Enregistrer" android:backgroundTint="#2E7D32"/>
+    </LinearLayout>
+</LinearLayout>

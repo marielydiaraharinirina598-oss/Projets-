@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#E65100" android:padding="16dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <Button android:id="@+id/btnRetour" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="←" android:textSize="18sp"
+            android:backgroundTint="@android:color/transparent" android:textColor="#FFFFFF"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Échéancier"
+            android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvNbEcheance" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="0 échéance(s)"
+            android:textColor="#FFE0B2" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Stats -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="#FFF3E0" android:padding="12dp">
+
+        <TextView android:id="@+id/tvTotalPaye"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Total payé : 0 Ar"
+            android:textColor="#E65100" android:textStyle="bold" android:textSize="14sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/tvProchaine"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Prochaine : -"
+            android:textColor="#555555" android:textSize="13sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView android:id="@+id/tvProgression"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Progression : 0/0 (0%)"
+            android:textColor="#2E7D32" android:textStyle="bold" android:textSize="13sp"/>
+    </LinearLayout>
+
+    <!-- Liste échéances -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerEcheancier"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

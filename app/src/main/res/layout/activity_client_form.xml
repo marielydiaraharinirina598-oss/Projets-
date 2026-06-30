@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1565C0"
+        android:padding="16dp">
+        <Button
+            android:id="@+id/btnTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nouveau client"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="start"/>
+    </LinearLayout>
+
+    <!-- Formulaire scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Nom *" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etNom" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Nom de famille"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Prénom *" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etPrenom" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Prénom"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="CIN *" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etCin" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Numéro CIN"
+                android:inputType="text" android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Téléphone *" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etTel" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="034 XX XXX XX"
+                android:inputType="phone" android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Adresse" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etAdresse" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Adresse complète"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Email" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etEmail" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="email@exemple.com"
+                android:inputType="textEmailAddress" android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Groupe communautaire" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etGroupe" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Ex : Groupe Femmes Solidaires"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Profession" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etProfession" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Ex : Agriculteur"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Date de naissance" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etNaissance" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="AAAA-MM-JJ"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Date d'adhésion" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etAdhesion" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="AAAA-MM-JJ"
+                android:background="#FFFFFF" android:padding="12dp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Statut" android:textStyle="bold" android:textColor="#333333" android:layout_marginBottom="4dp"/>
+            <Spinner android:id="@+id/spStatut" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="#FFFFFF"
+                android:padding="12dp" android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Boutons bas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnAnnuler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Annuler"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#1565C0"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Enregistrer"
+            android:backgroundTint="#1565C0"/>
+    </LinearLayout>
+
+</LinearLayout>

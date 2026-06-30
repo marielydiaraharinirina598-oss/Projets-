@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_clients"
+        android:icon="@drawable/ic_clients"
+        android:title="Clients"/>
+
+    <item
+        android:id="@+id/nav_credits"
+        android:icon="@drawable/ic_credits"
+        android:title="Crédits"/>
+
+    <item
+        android:id="@+id/nav_echeancier"
+        android:icon="@drawable/ic_echeancier"
+        android:title="Échéancier"/>
+
+    <item
+        android:id="@+id/nav_paiement"
+        android:icon="@drawable/ic_paiement"
+        android:title="Retards"/>
+
+</menu>

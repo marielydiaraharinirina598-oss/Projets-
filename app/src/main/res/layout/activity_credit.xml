@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#2E7D32" android:padding="16dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <Button android:id="@+id/btnRetour" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="←" android:textSize="18sp"
+            android:backgroundTint="@android:color/transparent" android:textColor="#FFFFFF"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Gestion des Crédits"
+            android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvCount" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="0 crédit(s)"
+            android:textColor="#C8E6C9" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Total prêté -->
+    <TextView android:id="@+id/tvTotal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#E8F5E9" android:padding="12dp"
+        android:text="Total prêté : 0 Ar"
+        android:textColor="#2E7D32" android:textStyle="bold" android:textSize="14sp"/>
+
+    <!-- Liste -->
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerCredits"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="8dp" android:clipToPadding="false"/>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAjouter" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="end"
+        android:layout_margin="16dp" android:src="@android:drawable/ic_input_add"
+        android:backgroundTint="#2E7D32" android:contentDescription="Nouveau crédit"/>
+</LinearLayout>

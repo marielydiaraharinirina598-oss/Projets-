@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="14dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp">
+
+    <!-- Nom + Statut -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/tvNom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nom Prénom"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"/>
+
+        <TextView
+            android:id="@+id/tvStatut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"/>
+    </LinearLayout>
+
+    <!-- CIN -->
+    <TextView
+        android:id="@+id/tvCin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CIN : -"
+        android:textSize="13sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="2dp"/>
+
+    <!-- Téléphone -->
+    <TextView
+        android:id="@+id/tvTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tél : -"
+        android:textSize="13sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Boutons actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✏️ Modifier"
+            android:textSize="13sp"
+            android:textColor="#1565C0"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗑 Supprimer"
+            android:textSize="13sp"
+            android:textColor="#C62828"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

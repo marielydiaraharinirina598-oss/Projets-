@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="14dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="6dp"
+    android:elevation="2dp">
+
+    <!-- Numéro + Statut -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+        <TextView android:id="@+id/tvNumero"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Échéance n°1"
+            android:textSize="15sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        <TextView android:id="@+id/tvStatut"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="EN_ATTENTE" android:textSize="11sp"
+            android:textStyle="bold" android:textColor="#1565C0"/>
+    </LinearLayout>
+
+    <!-- Date -->
+    <TextView android:id="@+id/tvDate"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="📅 -" android:textSize="13sp" android:textColor="#555555"
+        android:layout_marginBottom="6dp"/>
+
+    <!-- Détail montants -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="4dp">
+        <TextView android:id="@+id/tvCapital"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Capital : -"
+            android:textSize="12sp" android:textColor="#555555"/>
+        <TextView android:id="@+id/tvInteret"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Intérêt : -"
+            android:textSize="12sp" android:textColor="#555555"/>
+    </LinearLayout>
+
+    <!-- Total échéance -->
+    <TextView android:id="@+id/tvTotal"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Total : -" android:textSize="14sp"
+        android:textStyle="bold" android:textColor="#1A1A1A"
+        android:layout_marginBottom="2dp"/>
+
+    <!-- Capital restant dû -->
+    <TextView android:id="@+id/tvRestant"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Restant dû : -" android:textSize="12sp"
+        android:textColor="#E65100" android:layout_marginBottom="2dp"/>
+
+    <!-- Montant déjà payé (visible seulement si > 0) -->
+    <TextView android:id="@+id/tvPaye"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Payé : -" android:textSize="12sp"
+        android:textColor="#2E7D32" android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <!-- Bouton payer -->
+    <Button android:id="@+id/btnPayer"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="💳 Enregistrer un paiement"
+        android:backgroundTint="#E65100"
+        android:textColor="#FFFFFF" android:textSize="13sp"/>
+
+</LinearLayout>

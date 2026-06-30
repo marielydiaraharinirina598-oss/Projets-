@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F5F5F5">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#1565C0" android:padding="16dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <Button android:id="@+id/btnRetour" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="←"
+            android:backgroundTint="@android:color/transparent" android:textColor="#FFFFFF"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="👥 Gestion des Agents"
+            android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvCountAgent" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="0 agent(s)"
+            android:textColor="#BBDEFB" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerAgents"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="8dp" android:clipToPadding="false"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAjouterAgent" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="end"
+        android:layout_margin="16dp" android:src="@android:drawable/ic_input_add"
+        android:contentDescription="Ajouter un agent"/>
+</LinearLayout>
